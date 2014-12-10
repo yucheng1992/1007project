@@ -5,7 +5,7 @@ import pandas as pd
 import unittest
 
 
-data = pd.read_csv('yelp_restaurant_only_dataset.csv')
+data = pd.read_csv('../yelp_restaurant_only_dataset.csv')
 # Load the data set
 
 
