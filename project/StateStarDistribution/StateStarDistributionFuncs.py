@@ -108,22 +108,43 @@ def PlotPieChartForOneState(state):
 
     # weights calculates the weights of each star value
     # pert stores the percentage of each star values
-    weights = [float(x)/sum(star_count.values()) for x in star_count.values()]
-    percent = [str(100*(round(float(i), 2)))+'%' for i in weights]
+    weights = [float(x) / sum(star_count.values()) for x in star_count.values()]
+    percent = [str(100 * (round(float(i), 2))) + '%' for i in weights]
 
     # pie_labels represents the star value with the percentage of the certain star values
-    pie_labels = [str(x)+' star: '+y for x, y in zip(star_count.keys(), percent)]
+    pie_labels = [str(x) + ' star: ' + y for x, y in zip(star_count.keys(), percent)]
 
     # cs generates some colors
     # It will be used in plotting the pie chart later
-    cs = cm.Set1(np.arange(len(df.values))/10.)
+    cs = cm.Set1(np.arange(len(df.values)) / 10.)
 
     # Next, plot the pie chart
     patches, texts = plt.pie(star_count.values(), labels=star_count.keys(), labeldistance=1.05, colors=cs)
     plt.legend(patches, pie_labels, loc='upper right', bbox_to_anchor=(0.12, 1.), fontsize=9)
 
     plt.axis('equal')
-    plt.title(state+' : Restaurant Star Distribution')
+    plt.title(state + ' : Restaurant Star Distribution')
 
     plt.show()
 
+
+def PlotStateMeanStar():
+	
+	'''
+	In this function, we give a scatter plot showing mean stars in given states.
+	'''
+	
+	states = ['ON', 'EDH', 'MLN', 'WI', 'AZ', 'NV']
+	
+	state_mean = {}
+	
+	for state in states:
+		mean = np.mean(data[data['state']==state]['stars'])
+		state_mean[state] = mean
+	
+	plt.scatter(np.arange(len(state_mean)), state_mean.values())
+	plt.xticks(np.arange(len(state_mean)),state_mean.keys())
+	plt.ylabel('mean stars')
+	plt.title('Mean stars in states')
+	
+	plt.show()

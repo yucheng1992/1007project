@@ -1,11 +1,13 @@
 from Tkinter import *
 import matplotlib.pyplot as plt
 import numpy as np
-from SearchByName.SearchByNameFuncs import *
+from SearchRestaurantsByName.SearchByNameFuncs import *
 from StateStarDistribution.StateStarDistributionFuncs import *
 import pandas as pd
-from topResInState.topResInState import *
-from popResInState.popRestaurantInState import *
+from topRestaurantsInState.topResInState import *
+from popularRestaurantsInState.popRestaurantInState import *
+from topRestaurantsInStateAndPrice.topResInStateAndPrice import *
+from StateCheckinDistribution.CheckinDistributionFuncs import *
 
 
 class mainWindow():
@@ -30,17 +32,20 @@ class mainWindow():
         self.panel.pack(side='top', fill='both', expand='yes')
 
         # set up four main buttons of the main window which stand for four main functions.
-        self.nameSearchButton = Button(text='Name Search', command=self.nameSearchWindow)
-        self.nameSearchButton.place(relx=0.33, rely=0.33, anchor='center')
+        self.nameSearchButton = Button(text='Search Restaurants by Name', command=self.nameSearchWindow)
+        self.nameSearchButton.place(relx=0.20, rely=0.33, anchor='center')
 
-        self.expenseSearchButton = Button(text='Expense Search', command=self.expenseSearchWindow)
-        self.expenseSearchButton.place(relx=0.33, rely=0.66, anchor='center')
+        self.expenseSearchButton = Button(text='Search Restaurants by Expense', command=self.expenseSearchWindow)
+        self.expenseSearchButton.place(relx=0.20, rely=0.66, anchor='center')
 
-        self.popularRestaurantsButton = Button(text='Popular Restaurants', command=self.popularRestaurantsWindow)
-        self.popularRestaurantsButton.place(relx=0.66, rely=0.33, anchor='center')
+        self.popularRestaurantsButton = Button(text='Search Restaurants by Popularity', command=self.popularRestaurantsWindow)
+        self.popularRestaurantsButton.place(relx=0.52, rely=0.33, anchor='center')
 
-        self.stateStarDistributionButton = Button(text='State Star Distribution', command=self.stateStarDistributionWindow)
-        self.stateStarDistributionButton.place(relx=0.66, rely=0.66, anchor='center')
+        self.stateStarDistributionButton = Button(text="State's Restaurants' Stars Distribution", command=self.stateStarDistributionWindow)
+        self.stateStarDistributionButton.place(relx=0.52, rely=0.66, anchor='center')
+
+        self.checkinTimeDistributionButton = Button(text="Restaurants' Checkin Time Distribution", command=self.checkinTimeDistributionWindow)
+        self.checkinTimeDistributionButton.place(relx=0.84, rely=0.66, anchor='center')
 
 
     def nameSearchWindow(self):
@@ -200,23 +205,33 @@ class mainWindow():
         # initialize the star distribution button which can show the overall star distribution of six states
         starDistButton = Button(self.stateStarDistributionWindow, text='Show the Star Distribution of Six States!', command=PlotStarDistribution)
         starDistButton.pack()
-        starDistButton.place(relx=0.2, rely=0.2)
+        starDistButton.place(relx=0.2, rely=0.14)
 
-        promptLabel = Label(self.stateStarDistributionWindow, text='Press the button to see the star distribution!')
-        promptLabel.pack()
-        promptLabel.place(relx=0.2, rely=0.15)
+        promptLabelOne = Label(self.stateStarDistributionWindow, text="Press the button to see star distribution of the six states: 'ON', 'EDH', 'MLN', 'WI', 'AZ', 'NV' !")
+        promptLabelOne.pack()
+        promptLabelOne.place(relx=0.05, rely=0.08)
+
+        meanStarDistButton = Button(self.stateStarDistributionWindow, text='Show the Mean Stars of Each State!', command=self.meanStarOfEachStateStarDistWindow)
+        meanStarDistButton.pack()
+        meanStarDistButton.place(relx=0.2, rely=0.26)
+
+        promptLabelTwo = Label(self.stateStarDistributionWindow, text="Press the button to see the mean stars of the six states: 'ON', 'EDH', 'MLN', 'WI', 'AZ', 'NV' !")
+        promptLabelTwo.pack()
+        promptLabelTwo.place(relx=0.05, rely=0.20)
+
+
 
         # initialize a state list box for user to see.
         stateListbox = Listbox(self.stateStarDistributionWindow)
         stateListbox.pack()
-        stateListbox.place(relx=0.2, rely=0.4)
+        stateListbox.place(relx=0.2, rely=0.42)
         for item in ['ON', 'EDH', 'MLN', 'WI', 'AZ', 'NV']:
             stateListbox.insert(END, item)
 
         # initialize a select state button for user to select a certain state they want to see
         selectButtonLabel = Label(self.stateStarDistributionWindow, text='Select a button to see the pie charts for the star distribution for that state!')
         selectButtonLabel.pack()
-        selectButtonLabel.place(relx=0.05, rely=0.33)
+        selectButtonLabel.place(relx=0.05, rely=0.35)
 
         # initialize every state's show button
         buttonON = Button(self.stateStarDistributionWindow, text='ON state', command=lambda x='ON':PlotPieChartForOneState(x))
@@ -242,6 +257,34 @@ class mainWindow():
         buttonNV = Button(self.stateStarDistributionWindow, text='NV state', command=lambda x='NV':PlotPieChartForOneState(x))
         buttonNV.pack()
         buttonNV.place(relx=0.7, rely=0.64)
+
+
+    def checkinTimeDistributionWindow(self):
+        '''
+        this function is set up for checkin time distribution window
+        '''
+
+        self.checkinTimeDistributionWindow = Toplevel()
+        self.checkinTimeDistributionWindow.geometry('{}x{}'.format(600, 600))
+
+        self.stateEntry = StringVar()
+
+        stateLabel = Label(self.checkinTimeDistributionWindow, text="Please input the state whose overall restaurants' checkin numbers you want to see: ")
+        promptLabel = Label(self.checkinTimeDistributionWindow, text="You can input the folling states: WI, AZ, ON, EDH, MLN, KHL, NV")
+        statesEntry = Entry(self.checkinTimeDistributionWindow, textvariable=self.stateEntry)
+        stateLabel.place(relx=0.1, rely=0.25)
+        promptLabel.place(relx=0.1, rely=0.3)
+        statesEntry.place(relx=0.1, rely=0.35)
+
+        # initialize the show checkin time distribution button
+        showCheckinTimeDistributionButton = Button(self.checkinTimeDistributionWindow, text='Show Checkin Time Distribution', command=self.showCheckinDistributton)
+        showCheckinTimeDistributionButton.pack()
+        showCheckinTimeDistributionButton.place(relx=0.1, rely=0.43)
+
+        # initialize the clear button
+        clearButton = Button(self.checkinTimeDistributionWindow, text='Clear', command=self.new_canvas_checkin_window)
+        clearButton.pack()
+        clearButton.place(relx=0.55, rely=0.43)
 
 
     def showRestaurantSearchButton(self):
@@ -357,3 +400,25 @@ class mainWindow():
         w = Canvas(self.expenseSearchWindow, width=500, height=400)
         w.pack()
         w.place(relx=0.1, rely=0.74)
+
+
+    def meanStarOfEachStateStarDistWindow(self):
+        PlotStateMeanStar()
+
+
+    def showCheckinDistributton(self):
+        stateText = self.stateEntry.get()
+        try:
+            plot_checkin_distribution(merge_two_df(read_business_data(), read_checkin_data()), stateText)
+        except:
+            errorlabel = Label(self.checkinTimeDistributionWindow, text="Sorry, there is something wrong with your input state, please try another state")
+            errorlabel.place(relx=0.1,rely=0.5)
+
+
+    def new_canvas_checkin_window(self):
+        '''
+        this function is set up for expense search window and its function is to clear the text in the window.
+        '''
+        w = Canvas(self.checkinTimeDistributionWindow, width=500, height=400)
+        w.pack()
+        w.place(relx=0.1, rely=0.49)

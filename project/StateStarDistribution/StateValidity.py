@@ -10,17 +10,16 @@ class StateName():
                 {'ON', 'ELN', 'EDH', 'MLN', 'WI', 'NY', 'KHL', 'AZ', 'CA', 'NV'}
     """
 
-
     def __init__(self, input_state):
 
-
+        self.state_name = input_state
 
         # First, check whether self.name is a string type
-        if IsValidString(input_state):
+        if IsValidString(self.state_name):
             pass
         else:
             raise StateNotStringError('Not String! The input is supposed to be a string type!')
-        self.state_name = input_state
+
         # Remove spaces from self.name and make it all upper letters
         self.no_space_state_name = self.state_name.replace(' ', '')
         self.upper_state_name = self.no_space_state_name.upper()
