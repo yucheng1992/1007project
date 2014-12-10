@@ -60,7 +60,3 @@ def GetUsefulInfo(df):
     """
 
     return df[['name', 'city', 'state', 'stars']]
-
-
-
-

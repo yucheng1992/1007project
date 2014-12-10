@@ -123,12 +123,17 @@ class mainWindow():
         # initialize the clear button
         clearButton = Button(self.popularRestaurantsWindow, text='Clear', command=self.new_canvas_popular_window)
         clearButton.pack()
-        clearButton.place(relx=0.35, rely=0.47)
+        clearButton.place(relx=0.55, rely=0.47)
 
-        # initialize the plot button.
-        plotButton = Button(self.popularRestaurantsWindow, text='plot', command=self.plotTopRestaurantsPopularWinow)
-        plotButton.pack()
-        plotButton.place(relx=0.6, rely=0.47)
+        # initialize the plot star and review counts button.
+        plotStarAndReviewButton = Button(self.popularRestaurantsWindow, text='Plot star and review counts', command=self.plotTopRestaurantsPopularWinow)
+        plotStarAndReviewButton.pack()
+        plotStarAndReviewButton.place(relx=0.1, rely=0.52)
+
+        # initialize the plot the reviews counts a business get according to the time
+        plotReviewCountsTimeButton = Button(self.popularRestaurantsWindow, text="Plot a business's review counts", command=self.plotBusinessReviwPopularWinow)
+        plotReviewCountsTimeButton.pack()
+        plotReviewCountsTimeButton.place(relx=0.55, rely=0.52)
 
 
     def expenseSearchWindow(self):
@@ -331,10 +336,10 @@ class mainWindow():
 
         try:
             restaurantLabel = Label(self.popularRestaurantsWindow, text=restaurantsMoreInformation(topRestaurantsInState(stateText, int(numText))))
-            restaurantLabel.place(relx=0.1, rely=0.55)
+            restaurantLabel.place(relx=0.1, rely=0.62)
         except:
             errorLabel = Label(self.popularRestaurantsWindow, text="Sorry, there isn't such a state in the dataset, please try another state.")
-            errorLabel.place(relx=0.1,rely=0.52)
+            errorLabel.place(relx=0.1,rely=0.57)
 
 
     def new_canvas_popular_window(self):
@@ -343,7 +348,7 @@ class mainWindow():
         '''
         w = Canvas(self.popularRestaurantsWindow, width=500, height=300)
         w.pack()
-        w.place(relx=0.1, rely=0.53)
+        w.place(relx=0.1, rely=0.565)
 
 
     def plotTopRestaurantsPopularWinow(self):
@@ -360,6 +365,18 @@ class mainWindow():
         except:
             pass
 
+
+    def plotBusinessReviwPopularWinow(self):
+        '''
+        this function is set up for popular restaurants window and its function is to plot a business's review counts according to time changes.
+        '''
+        numText = self.numMentPopularWindow.get()
+        stateText = self.stateMentPopularWindow.get()
+
+        try:
+            popRestaurantInState(stateText, int(numText))
+        except:
+            pass
 
     def plotRestaurantRegionExpenseWindow(self):
         '''
