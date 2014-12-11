@@ -59,4 +59,5 @@ def GetUsefulInfo(df):
     :return:the selected columns of the df
     """
 
-    return df[['name', 'city', 'state', 'stars']]
+    df = df.set_index(['name'])
+    return df[['city', 'state', 'stars']]
