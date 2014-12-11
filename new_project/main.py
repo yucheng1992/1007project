@@ -1,5 +1,5 @@
 from Tkinter import *
-from mainWindow import *
+from mainWindows.mainWindow import *
 
 
 def main():
