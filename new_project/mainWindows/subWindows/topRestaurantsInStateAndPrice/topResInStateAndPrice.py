@@ -26,13 +26,18 @@ def restaurantInStateandPrice(state, price, num_top):
 	
     select_restaurants = f[(f['state'] == state) & (f['attributes_Price Range'] <= price)]
     sorted_restaurants = select_restaurants.sort(['stars','review_count','name'],ascending=False)
-	
+    sorted_restaurants['Price Range'] = sorted_restaurants['attributes_Price Range']
+    sorted_restaurants.drop('attributes_Price Range', 1)
+    sorted_restaurants.dropna()
     return sorted_restaurants[:num_top][['name', 'city', 'attributes_Price Range', 'state', 'stars']]
 
+
 def restaurantRegionPlot(restaurants):
-	
-    # The parameter 'restaurants' should be a DataFrame passed from above restaurantInStateandPrice function.
-    # And the function will return a pie graph showing the regions where these top restaurants are in.
+    '''
+	The parameter 'restaurants' should be a DataFrame passed from above restaurantInStateandPrice function.
+    And the function will return a pie graph showing the regions where these top restaurants are in.
+	'''
+
     plt.figure()
 
     topRestaurants = restaurants.set_index('name')

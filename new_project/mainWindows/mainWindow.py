@@ -403,7 +403,7 @@ class mainWindow():
         numText = self.numMent.get()
 
         try:
-            showPriceRangeRestaurants = Label(self.expenseSearchWindow, text=restaurantInStateandPrice(stateText, int(priceRangeText), int(numText)))
+            showPriceRangeRestaurants = Label(self.expenseSearchWindow, text=restaurantInStateandPrice(stateText, int(priceRangeText), int(numText))[:7])
             showPriceRangeRestaurants.place(relx=0.1, rely=0.79)
         except InputError:
             inputErrorLabel = Label(self.expenseSearchWindow, text="Sorry, your input state or price range or number of TOP is wrong.")

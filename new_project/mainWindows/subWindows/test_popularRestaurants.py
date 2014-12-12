@@ -5,15 +5,21 @@ from popularRestaurantsInState.popRestaurantInState import popRestaurantInState
 
 
 class testpopRestaurantInState(unittest.TestCase):
+    '''
+    This is the test for the function popRestaurantInState.
+    '''
     def setUp(self):
-        self.state1 = 'Wp'
-        self.state2 = 'abc'
-        self.num_top1 = 5
-        self.num_top2 = 10
+        '''
+        set up test data for the test.
+        '''
+        self.state = 'AZ'
+        self.num_top = 10
 
     def testpopRestaurantInState(self):
-        self.assertRaises(InputError, popRestaurantInState, self.state2,self.num_top1)
-        self.assertRaises(InputError, popRestaurantInState, self.state1, self.num_top2)
+        '''
+        Test the given function.
+        '''
+        self.assertRaises(InputError, popRestaurantInState, self.state, self.num_top)
 
 
 if __name__ == '__main__':

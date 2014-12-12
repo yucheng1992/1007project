@@ -34,7 +34,7 @@ def popRestaurantInState(state, num_top):
 
 	review = pd.read_csv('yelp_training_set_review.csv')
 	review['date'] = pd.to_datetime(review['date'])
-	review = review.ix[:,:5]
+	review = review.ix[:, :5]
 
 	#Load yelp_training_set_business file.
 	#Select only 'business_id','name','state' columns which are relevant to our analysis.
@@ -48,12 +48,12 @@ def popRestaurantInState(state, num_top):
 	review = review.merge(business, on = 'business_id',how = 'left')
 
 	# Drop the records where business_id is invalid.
-	mask = [review['business_id']!='#NAME?', review['business_id'] !='#VALUE!']
-	review = review[mask[0]&mask[1]]
+	mask = [review['business_id'] != '#NAME?', review['business_id'] != '#VALUE!']
+	review = review[mask[0] & mask[1]]
 	
 	
 	# Check if we get an input num_top following the instruction.
-	if num_top not in [1,2,3,4,5]:
+	if num_top not in [1, 2, 3, 4, 5]:
 		raise InputError('Wrong num_top. ')
 	
 	
