@@ -1,5 +1,5 @@
 from topResInState import topRestaurantsInState, restaurantStarsPlot, restaurantsMoreInformation
-from exceptionClass import InputError
+from exceptionClass import stateInputError,num_topInputError
 import pandas as pd
 import sys
 
@@ -27,8 +27,12 @@ def main():
 			print "Show more detailed information. "
 			print restaurantsMoreInformation(restaurants)
 			
-		except (InputError, ValueError):
-			print 'Invalid input, please follow the instruction. '
+		except(num_topInputError, ValueError):
+			print 'Invalid input for num_top, please follow the instruction.' 
+			
+		except (stateInputError):
+			print 'Invalid input for state, please follow the instruction. '
+		
 			
 		except (KeyboardInterrupt, IOError):
 			print 'Thanks for using. '

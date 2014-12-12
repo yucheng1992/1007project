@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from exceptionClass import InputError
+from exceptionClass import stateInputError, priceInputError, num_topInputError
 
 
 f = pd.read_csv('yelp_restaurant_only_dataset.csv')
@@ -15,13 +15,13 @@ def restaurantInStateandPrice(state, price, num_top):
     '''
     state = state.upper()
     if state not in ['WI', 'AZ', 'NV', 'CA', 'ON', 'EDH', 'ELN', 'MLN', 'NY', 'KHL'] :
-        raise InputError('Wrong state. ')
+        raise stateInputError('Wrong state. ')
 		
     if price not in [1,2,3,4]:
-        raise InputError('Wrong price range. ')
+        raise priceInputError('Wrong price range. ')
 		
     if not(num_top > 0):
-        raise InputError('Wrong number of TOP. ')
+        raise num_topInputError('Wrong number of TOP. ')
 	
 	
     select_restaurants = f[(f['state'] == state) & (f['attributes_Price Range'] <= price)]
