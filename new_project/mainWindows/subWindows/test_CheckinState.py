@@ -1,5 +1,3 @@
-# author: Wenjia Wu(ww933)
-
 import unittest
 
 from StateCheckinDistribution.CheckinStateCheck import *

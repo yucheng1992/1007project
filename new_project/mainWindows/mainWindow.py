@@ -33,7 +33,7 @@ class mainWindow():
         self.panel = Label(top, image=self.backImage)
         self.panel.pack(side='top', fill='both', expand='yes')
 
-        # set up four main buttons of the main window which stand for four main functions.
+        # set up six main buttons of the main window which stand for six main functions.
         self.nameSearchButton = Button(text='Search Restaurants by Name', command=self.nameSearchWindow)
         self.nameSearchButton.place(relx=0.20, rely=0.33, anchor='center')
 
@@ -140,6 +140,7 @@ class mainWindow():
         '''
         set up the third sub window -- expense window.
         '''
+
         # initialize the expense search window
         self.expenseSearchWindow = Toplevel()
         self.expenseSearchWindow.geometry('{}x{}'.format(600, 600))
@@ -311,6 +312,7 @@ class mainWindow():
         '''
         this function is set up for the search button and its function is to search for a restaurant according to its partial name.
         '''
+
         mtext = self.ment.get()
 
         try:
@@ -328,6 +330,7 @@ class mainWindow():
         '''
         this function is set up for search name window and its function is to show a 3D-figure of the distribution of stars according to the restaurants' latitude and longitude.
         '''
+
         mtext = self.ment.get()
         df = NameSearch(data, mtext)[:51]
         plot3dDistribution(df)
@@ -337,6 +340,7 @@ class mainWindow():
         '''
         this function is set up for search restaurants window and its function is to clear the text in the window.
         '''
+
         w = Canvas(self.nameSearchWindow, width=500, height=500)
         w.pack()
         w.place(relx=0.2, rely=0.45)
@@ -365,6 +369,7 @@ class mainWindow():
         '''
         this function is set up for popular restaurants window and its function is to clear the text in the window.
         '''
+
         w = Canvas(self.popularRestaurantsWindow, width=500, height=300)
         w.pack()
         w.place(relx=0.1, rely=0.565)
@@ -411,6 +416,7 @@ class mainWindow():
         '''
         this function is set up for expense search window and its function is to plot the price range of the restaurants you search
         '''
+
         stateText = self.stateMent.get()
         priceRangeText = self.priceRangeMent.get()
         numText = self.numMent.get()
@@ -444,6 +450,7 @@ class mainWindow():
         '''
         this function is set up for expense search window and its function is to clear the text in the window.
         '''
+
         w = Canvas(self.expenseSearchWindow, width=500, height=400)
         w.pack()
         w.place(relx=0.1, rely=0.74)
@@ -453,6 +460,7 @@ class mainWindow():
         '''
         this function is to show the mean star of each state.
         '''
+
         PlotStateMeanStar()
 
 
@@ -460,6 +468,7 @@ class mainWindow():
         '''
         this function is set up for the review counts distribution for the AZ state winodw.
         '''
+
         num = self.numberEntry.get()
         try:
             popRestaurantInState(num)
@@ -474,6 +483,7 @@ class mainWindow():
         '''
         this function is set up for the checkindistribution button and it will show a graph for the distribution.
         '''
+
         stateText = self.stateEntry.get()
         try:
             plot_checkin_distribution(merge_two_df(read_business_data(), read_checkin_data()), stateText)

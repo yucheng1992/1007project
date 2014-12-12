@@ -1,8 +1,7 @@
-# author: Wenjia Wu(ww933)
-
 from SearchRestaurantsByName.SearchByNameFuncs import *
 import pandas as pd
 import unittest
+
 
 # Load the data set
 data = pd.read_csv('yelp_restaurant_only_dataset.csv')
@@ -26,10 +25,8 @@ class NameSearchNoResultErrorTest(unittest.TestCase):
         test whether NameSearch(df, partial_name) will raise NameSearchNoResultError when partial_name is '^'
         """
         with self.assertRaises(NameSearchNoResultError):
-
             NameSearch(data, '^')
 
 
 if __name__ == '__main__':
-
     unittest.main()

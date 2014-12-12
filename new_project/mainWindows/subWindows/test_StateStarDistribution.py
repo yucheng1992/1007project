@@ -1,5 +1,3 @@
-# author: Wenjia Wu(ww933)
-
 from StateStarDistribution.StateValidity import *
 from StateStarDistribution.StateStarDistributionFuncs import *
 import unittest
@@ -18,6 +16,7 @@ class StateNameTests(unittest.TestCase):
         """
         self.assertRaises(StateNotStringError, StateName, 222)
 
+
     def test_non_alpha_state(self):
         """
         test whether StateName(state) will raise StateNameContainNonAlphaError if the parameter state contains
@@ -25,12 +24,14 @@ class StateNameTests(unittest.TestCase):
         """
         self.assertRaises(StateNameContainNonAlphaError, StateName, 'wi*')
 
+
     def test_invalid_state(self):
         """
         test whether StateName(state) will raise InvalidStateNameError if the parameter state is not a valid one.
         I.e: the parameter state doesn't belong to {'ON', 'ELN', 'EDH', 'MLN', 'WI', 'NY', 'KHL', 'AZ', 'CA', 'NV'}
         """
         self.assertRaises(InvalidStateNameError, StateName, 'WW')
+
 
     def test_valid_state(self):
         """
@@ -52,6 +53,6 @@ class PlotPieChartForOneStateTest(unittest.TestCase):
         """
         self.assertRaises(NoValidPieChartForOneStateError, PlotPieChartForOneState, 'CA')
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     unittest.main()

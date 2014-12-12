@@ -1,9 +1,8 @@
-# author: Wenying Liu(wl1207)
-
 import unittest
 from pandas import DataFrame, Series
-from topRestaurantsInState.exceptionClass import InputError
+from topRestaurantsInState.exceptionClass import num_topInputError, stateInputError
 from topRestaurantsInState.topResInState import topRestaurantsInState
+
 
 class testtopRestaurantsInState(unittest.TestCase):
     '''
@@ -14,10 +13,12 @@ class testtopRestaurantsInState(unittest.TestCase):
         '''
         set up testing data for the test.
         '''
+
         self.state1 = 'AZ'
         self.state2 = 'DS'
         self.num_top1 = 3
         self.num_top2 = -3
+
 
     def testtopRestaurantsInState(self):
         '''
@@ -28,8 +29,9 @@ class testtopRestaurantsInState(unittest.TestCase):
         self.assertIsInstance(topRestaurantsInState(self.state1,self.num_top1), DataFrame)
 
         # state:'DS' or num_top = -3 are not right user input, thus it is expected to raise an exception.
-        self.assertRaises(InputError, topRestaurantsInState,self.state1, self.num_top2)
-        self.assertRaises(InputError, topRestaurantsInState,self.state2 ,self.num_top1)
+        self.assertRaises(num_topInputError, topRestaurantsInState,self.state1, self.num_top2)
+        self.assertRaises(stateInputError, topRestaurantsInState,self.state2 ,self.num_top1)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,4 +1,4 @@
-# author: Wenying Liu(wl1207):90% and Yucheng Lu(yl2695):10%
+# author: Wenying Liu(wl1207):80% and Yucheng Lu(yl2695):20%
 
 import pandas as pd
 import matplotlib.pyplot as plt

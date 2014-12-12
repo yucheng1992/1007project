@@ -1,4 +1,4 @@
-# author: Yucheng Lu(yl2695):40% and Wenjia Wu(ww933):60%
+# author: Yucheng Lu(yl2695):50% and Wenjia Wu(ww933):50%
 
 from SearchByNameExceptions import *
 import matplotlib.pyplot as plt
