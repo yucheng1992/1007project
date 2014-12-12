@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from exceptionClass import InputError
+from exceptionClass import stateInputError, num_topInputError
 
 
 f = pd.read_csv('yelp_restaurant_only_dataset.csv')
@@ -13,10 +13,10 @@ def topRestaurantsInState(state,num_top):
 
 	state = state.upper()
 	if state not in ['WI', 'AZ', 'NV', 'CA', 'ON', 'EDH', 'ELN', 'MLN', 'NY', 'KHL'] :
-		raise InputError('Wrong state. ')
+		raise stateInputError('Wrong state. ')
 		
 	if not(num_top > 0):
-		raise InputError('Wrong number of TOP. ')
+		raise num_topInputError('Wrong number of TOP. ')
 		
 	#Select out all restaurants in given state.
 	select_restaurants = f[f['state'] == state]

@@ -23,6 +23,7 @@ def main():
 			
 		except(InputError, ValueError):
 			print 'Invalid input, please follow the instruction. '
+			
 		except(KeyboardInterrupt,EOFError):
 			print 'Thanks for using. '
 			sys.exit()
