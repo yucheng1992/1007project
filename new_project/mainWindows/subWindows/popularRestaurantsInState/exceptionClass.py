@@ -1,3 +1,5 @@
+# author: Wenying Liu(wl1207)
+
 class InputError(Exception):
     """
     This exception will raise when user input does not follow the instruction.

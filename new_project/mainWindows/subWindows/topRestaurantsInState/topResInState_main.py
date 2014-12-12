@@ -1,3 +1,5 @@
+# author: Wenying Liu(wl1207)
+
 from topResInState import topRestaurantsInState, restaurantStarsPlot, restaurantsMoreInformation
 from exceptionClass import stateInputError,num_topInputError
 import pandas as pd

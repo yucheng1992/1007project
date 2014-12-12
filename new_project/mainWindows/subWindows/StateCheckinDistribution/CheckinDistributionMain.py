@@ -1,4 +1,4 @@
-__author__ = 'chianti'
+# author: Wenjia Wu(ww933)
 
 from CheckinDistributionFuncs import *
 import sys

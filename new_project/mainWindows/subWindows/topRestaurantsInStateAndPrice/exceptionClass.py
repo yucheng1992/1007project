@@ -1,3 +1,5 @@
+# author: Wenying Liu(wl1207)
+
 class stateInputError(Exception):
     
 	"""

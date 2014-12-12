@@ -1,5 +1,4 @@
-__author__ = 'chianti'
-
+# author: Wenjia Wu(ww933)
 
 class NameSearchNoResultError(Exception):
     """

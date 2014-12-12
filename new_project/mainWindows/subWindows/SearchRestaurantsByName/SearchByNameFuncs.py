@@ -1,3 +1,5 @@
+# author: Yucheng Lu(yl2695):40% and Wenjia Wu(ww933):60%
+
 from SearchByNameExceptions import *
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.axes3d import Axes3D

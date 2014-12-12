@@ -1,3 +1,5 @@
+# author: Wenying Liu(wl1207):90% and Yucheng Lu(yl2695):10%
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from exceptionClass import stateInputError, priceInputError, num_topInputError
@@ -18,8 +20,8 @@ def restaurantInStateandPrice(state, price, num_top):
         raise stateInputError('Wrong state. ')
 
     try:
-        pri = int(price)
-        if pri not in [1,2,3,4]:
+        target_price = int(price)
+        if target_price not in [1,2,3,4]:
             raise priceInputError('Wrong price range. ')
     except:
         raise priceInputError('Wrong price range. ')
@@ -30,8 +32,8 @@ def restaurantInStateandPrice(state, price, num_top):
         raise num_topInputError('Wrong number of TOP. ')
 	
 	
-    select_restaurants = f[(f['state'] == state) & (f['attributes_Price Range'] <= pri)]
-    sorted_restaurants = select_restaurants.sort(['stars','review_count','name'],ascending=False)
+    select_restaurants = f[(f['state'] == state) & (f['attributes_Price Range'] <= target_price)]
+    sorted_restaurants = select_restaurants.sort(['stars','review_count','name'], ascending=False)
     sorted_restaurants['Price Range'] = sorted_restaurants['attributes_Price Range']
     sorted_restaurants.drop('attributes_Price Range', 1)
     sorted_restaurants.dropna()
@@ -47,6 +49,6 @@ def restaurantRegionPlot(restaurants):
     plt.figure()
 
     topRestaurants = restaurants.set_index('name')
-    topRestaurants['city'].value_counts().plot(kind = 'pie', figsize=(6,6))
+    topRestaurants['city'].value_counts().plot(kind = 'pie', figsize=(6, 6))
     plt.title('The regions of the top restaurants')
     plt.show()

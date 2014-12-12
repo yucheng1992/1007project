@@ -23,12 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mainWindow.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mainWindows/mainWindow.py">
+      <file leaf-file-name="exceptionClass.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/exceptionClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3977273" vertical-offset="5008" max-vertical-offset="9560">
-              <caret line="284" column="59" selection-start-line="284" selection-start-column="59" selection-end-line="284" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+              <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topResInStateAndPrice.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1180">
+              <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+              <folding>
+                <element signature="e#62#81#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,11 +48,63 @@
       <file leaf-file-name="topResInState.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="1380">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="1420">
+              <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#62#81#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topResInState_main.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
+              <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+              <folding>
+                <element signature="e#31#127#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateStarDistributionExceptions.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateStarDistributionExceptions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateStarDistributionFuncs.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateStarDistributionFuncs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.04024145" vertical-offset="0" max-vertical-offset="3020">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateValidity.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateValidity.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1203" max-vertical-offset="1700">
+              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exceptionClass.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/exceptionClass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="280">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,9 +112,23 @@
       <file leaf-file-name="popRestaurantInState.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="1860">
-              <caret line="22" column="77" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="77" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="1980">
+              <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+              <folding>
+                <element signature="e#31#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popRestaurantInState_main.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="740">
+              <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+              <folding>
+                <element signature="e#31#84#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,16 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Part1and4/InputCheck.py" />
-        <option value="$PROJECT_DIR$/Part1and4/PlotDistributionFuncs.py" />
-        <option value="$PROJECT_DIR$/Part2and3/topRestaurantsInStateSelect_main.py" />
-        <option value="$PROJECT_DIR$/gui.py" />
-        <option value="$PROJECT_DIR$/Part2and3/topRestaurantInStateAndPriceSelect.py" />
-        <option value="$PROJECT_DIR$/Part2and3/topRestaurantsInStateSelect.py" />
-        <option value="$PROJECT_DIR$/Part1and4/mainWindow.py" />
-        <option value="$PROJECT_DIR$/Part1and4/SearchByNameFuncs.py" />
-        <option value="$PROJECT_DIR$/checkin.py" />
-        <option value="$PROJECT_DIR$/Part2and3/test.py" />
         <option value="$PROJECT_DIR$/SearchByName/SearchByNameTest.py" />
         <option value="$PROJECT_DIR$/popResInState/popRestaurantInState.py" />
         <option value="$PROJECT_DIR$/StateStarDistribution/StateValidity.py" />
@@ -101,21 +169,31 @@
         <option value="$PROJECT_DIR$/mainWindows/__init__.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/__init__.py" />
+        <option value="$PROJECT_DIR$/mainWindows/mainWindow.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameExceptions.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameFuncs.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameMain.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinDistributionFuncs.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinDistributionMain.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinStateCheck.py" />
-        <option value="$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameMain.py" />
-        <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState_main.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinStateExceptions.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateStarDistributionExceptions.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateStarDistributionFuncs.py" />
-        <option value="$PROJECT_DIR$/mainWindows/subWindows/test_SearchByName.py" />
-        <option value="$PROJECT_DIR$/mainWindows/subWindows/test_popularRestaurants.py" />
-        <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/exceptionClass.py" />
-        <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateValidity.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/exceptionClass.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState_main.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/exceptionClass.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState_main.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/exceptionClass.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice_main.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/test_popularRestaurants.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/test_topRestaurantsInState.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/test_CheckinState.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/test_SearchByName.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/test_StateStarDistribution.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState.py" />
-        <option value="$PROJECT_DIR$/mainWindows/mainWindow.py" />
+        <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice.py" />
       </list>
     </option>
   </component>
@@ -302,6 +380,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="StateStarDistribution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainWindows" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subWindows" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StateCheckinDistribution" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -635,7 +735,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3322091" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3322091" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -745,7 +845,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8920">
           <caret line="301" column="94" selection-start-line="301" selection-start-column="94" selection-end-line="301" selection-end-column="94" />
-          <folding />
+          <folding>
+            <element signature="e#30#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -824,7 +926,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4700" max-vertical-offset="8920">
           <caret line="245" column="89" selection-start-line="245" selection-start-column="89" selection-end-line="245" selection-end-column="89" />
-          <folding />
+          <folding>
+            <element signature="e#30#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -863,141 +967,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinStateExceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="339">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinStateCheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12269939" vertical-offset="0" max-vertical-offset="600">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinDistributionMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10227273" vertical-offset="4" max-vertical-offset="980">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinDistributionFuncs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2840909" vertical-offset="0" max-vertical-offset="2420">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateStarDistributionExceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateValidity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/exceptionClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="287">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29498526" vertical-offset="0" max-vertical-offset="880">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/exceptionClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="313">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameExceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateStarDistributionFuncs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3120">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_CheckinState.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas/core/ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20392157" vertical-offset="11096" max-vertical-offset="19600">
           <caret line="571" column="0" selection-start-line="571" selection-start-column="0" selection-end-line="571" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_SearchByName.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83014864" vertical-offset="269" max-vertical-offset="780">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_topRestaurantsInState.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3499044" vertical-offset="97" max-vertical-offset="720">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_StateStarDistribution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_popularRestaurants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8208955" vertical-offset="0" max-vertical-offset="560">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1010,38 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/exceptionClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49822065" vertical-offset="0" max-vertical-offset="562">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5970149" vertical-offset="0" max-vertical-offset="660">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameFuncs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80145717" vertical-offset="260" max-vertical-offset="1100">
-          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/-1856293957/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="11777" max-vertical-offset="103260">
@@ -1050,28 +991,228 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState.py">
+    <entry file="file://$PROJECT_DIR$/mainWindows/mainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="1380">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9780">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#30#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/exceptionClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <element signature="e#31#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_popularRestaurants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <element signature="e#31#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_CheckinState.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_SearchByName.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_StateStarDistribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/test_topRestaurantsInState.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="820">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <element signature="e#31#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameExceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameFuncs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1420">
+          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+          <folding>
+            <element signature="e#59#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <element signature="e#28#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinDistributionFuncs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2420">
+          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+          <folding>
+            <element signature="e#59#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinDistributionMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="980">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <element signature="e#28#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinStateCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateCheckinDistribution/CheckinStateExceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="280">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateValidity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1203" max-vertical-offset="1700">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/exceptionClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/exceptionClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="280">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="1860">
-          <caret line="22" column="77" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <element signature="e#31#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="740">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <element signature="e#31#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <element signature="e#31#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="923" max-vertical-offset="1420">
+          <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+          <folding>
+            <element signature="e#62#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1180">
+          <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+          <folding>
+            <element signature="e#62#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateStarDistributionExceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/mainWindow.py">
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/StateStarDistribution/StateStarDistributionFuncs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3977273" vertical-offset="5008" max-vertical-offset="9560">
-          <caret line="284" column="59" selection-start-line="284" selection-start-column="59" selection-end-line="284" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.04024145" vertical-offset="0" max-vertical-offset="3020">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
