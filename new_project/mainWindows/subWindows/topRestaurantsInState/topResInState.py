@@ -7,25 +7,29 @@ f = pd.read_csv('yelp_restaurant_only_dataset.csv')
 
 
 def topRestaurantsInState(state,num_top):
-	'''
-	This function will select out top restaurants in given state and given number.
-	'''
+    '''
+    This function will select out top restaurants in given state and given number.
+    '''
 
-	state = state.upper()
-	if state not in ['WI', 'AZ', 'NV', 'CA', 'ON', 'EDH', 'ELN', 'MLN', 'NY', 'KHL'] :
-		raise stateInputError('Wrong state. ')
-		
-	if not(num_top > 0):
-		raise num_topInputError('Wrong number of TOP. ')
-		
-	#Select out all restaurants in given state.
-	select_restaurants = f[f['state'] == state]
-	
-	#Sort restaurants according to stars; if several restaurants have the same stars, compare their review counts;
-	#if still the same, sort it in descending alphabetical order.
-	sorted_restaurants = select_restaurants.sort(['stars','review_count', 'name'], ascending=False)
-	
-	return sorted_restaurants[:num_top]
+    state = state.upper()
+    if state not in ['WI', 'AZ', 'NV', 'CA', 'ON', 'EDH', 'ELN', 'MLN', 'NY', 'KHL'] :
+        raise stateInputError('Wrong state. ')
+
+    try:
+        num = int(num_top)
+        if num <= 0:
+            raise num_topInputError('Wrong number of TOP. ')
+    except:
+        raise num_topInputError('Wrong number of TOP. ')
+
+    #Select out all restaurants in given state.
+    select_restaurants = f[f['state'] == state]
+
+    #Sort restaurants according to stars; if several restaurants have the same stars, compare their review counts;
+    #if still the same, sort it in descending alphabetical order.
+    sorted_restaurants = select_restaurants.sort(['stars','review_count', 'name'], ascending=False)
+
+    return sorted_restaurants[:num]
 
 
 def restaurantStarsPlot(restaurants):

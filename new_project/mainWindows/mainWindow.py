@@ -47,6 +47,9 @@ class mainWindow():
         self.checkinTimeDistributionButton = Button(text="Restaurants' Checkin Time Distribution", command=self.checkinTimeDistributionWindow)
         self.checkinTimeDistributionButton.place(relx=0.84, rely=0.66, anchor='center')
 
+        self.AZreviewCountsDistributionButton = Button(text="AZ popular restaurants' review", command=self.showAZReviewCountsDistributionWindow)
+        self.AZreviewCountsDistributionButton.place(relx=0.84, rely=0.33, anchor='center')
+
 
     def nameSearchWindow(self):
         '''
@@ -224,15 +227,6 @@ class mainWindow():
         promptLabelTwo.pack()
         promptLabelTwo.place(relx=0.05, rely=0.20)
 
-
-
-        # initialize a state list box for user to see.
-        stateListbox = Listbox(self.stateStarDistributionWindow)
-        stateListbox.pack()
-        stateListbox.place(relx=0.2, rely=0.42)
-        for item in ['ON', 'EDH', 'MLN', 'WI', 'AZ', 'NV']:
-            stateListbox.insert(END, item)
-
         # initialize a select state button for user to select a certain state they want to see
         selectButtonLabel = Label(self.stateStarDistributionWindow, text='Select a button to see the pie charts for the star distribution for that state!')
         selectButtonLabel.pack()
@@ -241,27 +235,27 @@ class mainWindow():
         # initialize every state's show button
         buttonON = Button(self.stateStarDistributionWindow, text='ON state', command=lambda x='ON':PlotPieChartForOneState(x))
         buttonON.pack()
-        buttonON.place(relx=0.5, rely=0.4)
+        buttonON.place(relx=0.2, rely=0.4)
 
         buttonEDH = Button(self.stateStarDistributionWindow, text='EDH state', command=lambda x='EDH':PlotPieChartForOneState(x))
         buttonEDH.pack()
-        buttonEDH.place(relx=0.5, rely=0.52)
+        buttonEDH.place(relx=0.2, rely=0.52)
 
         buttonMLN = Button(self.stateStarDistributionWindow, text='MLN state', command=lambda x='MLN':PlotPieChartForOneState(x))
         buttonMLN.pack()
-        buttonMLN.place(relx=0.7, rely=0.4)
+        buttonMLN.place(relx=0.55, rely=0.4)
 
         buttonWI = Button(self.stateStarDistributionWindow, text='WI state', command=lambda x='WI':PlotPieChartForOneState(x))
         buttonWI.pack()
-        buttonWI.place(relx=0.5, rely=0.64)
+        buttonWI.place(relx=0.2, rely=0.64)
 
         buttonAZ = Button(self.stateStarDistributionWindow, text='AZ state', command=lambda x='AZ':PlotPieChartForOneState(x))
         buttonAZ.pack()
-        buttonAZ.place(relx=0.7, rely=0.52)
+        buttonAZ.place(relx=0.55, rely=0.52)
 
         buttonNV = Button(self.stateStarDistributionWindow, text='NV state', command=lambda x='NV':PlotPieChartForOneState(x))
         buttonNV.pack()
-        buttonNV.place(relx=0.7, rely=0.64)
+        buttonNV.place(relx=0.55, rely=0.64)
 
 
     def checkinTimeDistributionWindow(self):
@@ -269,27 +263,43 @@ class mainWindow():
         this function is set up for checkin time distribution window
         '''
 
-        self.checkinTimeDistributionWindow = Toplevel()
-        self.checkinTimeDistributionWindow.geometry('{}x{}'.format(600, 600))
+        self.checkinTimeDistributtonWindow = Toplevel()
+        self.checkinTimeDistributtonWindow.geometry('{}x{}'.format(600, 600))
 
         self.stateEntry = StringVar()
 
-        stateLabel = Label(self.checkinTimeDistributionWindow, text="Please input the state whose overall restaurants' checkin numbers you want to see: ")
-        promptLabel = Label(self.checkinTimeDistributionWindow, text="You can input the folling states: WI, AZ, ON, EDH, MLN, KHL, NV")
-        statesEntry = Entry(self.checkinTimeDistributionWindow, textvariable=self.stateEntry)
+        stateLabel = Label(self.checkinTimeDistributtonWindow, text="Please input the state whose overall restaurants' checkin numbers you want to see: ")
+        promptLabel = Label(self.checkinTimeDistributtonWindow, text="You can input the folling states: WI, AZ, ON, EDH, MLN, KHL, NV")
+        statesEntry = Entry(self.checkinTimeDistributtonWindow, textvariable=self.stateEntry)
         stateLabel.place(relx=0.1, rely=0.25)
         promptLabel.place(relx=0.1, rely=0.3)
         statesEntry.place(relx=0.1, rely=0.35)
 
         # initialize the show checkin time distribution button
-        showCheckinTimeDistributionButton = Button(self.checkinTimeDistributionWindow, text='Show Checkin Time Distribution', command=self.showCheckinDistributton)
+        showCheckinTimeDistributionButton = Button(self.checkinTimeDistributtonWindow, text='Show Checkin Time Distribution', command=self.showCheckinDistributton)
         showCheckinTimeDistributionButton.pack()
         showCheckinTimeDistributionButton.place(relx=0.1, rely=0.43)
 
-        # initialize the clear button
-        clearButton = Button(self.checkinTimeDistributionWindow, text='Clear', command=self.new_canvas_checkin_window)
-        clearButton.pack()
-        clearButton.place(relx=0.55, rely=0.43)
+
+    def showAZReviewCountsDistributionWindow(self):
+        '''
+        this function is set up for the state AZ's restaurants rebiew counts distribution window
+        '''
+
+        self.reviewCountsWindow = Toplevel()
+        self.reviewCountsWindow.geometry('{}x{}'.format(600, 600))
+
+        self.numberEntry = StringVar()
+
+        promptLabel = Label(self.reviewCountsWindow, text="You can input the following numbers: 1, 2, 3, 4, 5")
+        numbersEntry = Entry(self.reviewCountsWindow, textvariable=self.numberEntry)
+        promptLabel.place(relx=0.1, rely=0.25)
+        numbersEntry.place(relx=0.1, rely=0.3)
+
+        # initialize the show review counts distribution distribution button
+        showReviewCountsDistributionButton = Button(self.reviewCountsWindow, text='Show Review Counts Distribution', command=self.showReviewCountsDistributton)
+        showReviewCountsDistributionButton.pack()
+        showReviewCountsDistributionButton.place(relx=0.1, rely=0.4)
 
 
     def showRestaurantSearchButton(self):
@@ -303,8 +313,12 @@ class mainWindow():
             mylabel.place(relx=0.2, rely=0.5)
 
         except:
-            errorlabel = Label(self.nameSearchWindow, text="Sorry, Find No Restaurant of This Name, please try another name")
-            errorlabel.place(relx=0.2,rely=0.45)
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(500, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, find no Restaurant of this name, please try another name.")
+            inputErrorLabel.pack()
+
+
 
 
     def plot3D(self):
@@ -335,11 +349,13 @@ class mainWindow():
         stateText = self.stateMentPopularWindow.get()
 
         try:
-            restaurantLabel = Label(self.popularRestaurantsWindow, text=restaurantsMoreInformation(topRestaurantsInState(stateText, int(numText))))
+            restaurantLabel = Label(self.popularRestaurantsWindow, text=restaurantsMoreInformation(topRestaurantsInState(stateText, numText)))
             restaurantLabel.place(relx=0.1, rely=0.62)
         except:
-            errorLabel = Label(self.popularRestaurantsWindow, text="Sorry, there isn't such a state in the dataset, please try another state.")
-            errorLabel.place(relx=0.1,rely=0.57)
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(350, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, your input is wrong, please try again.")
+            inputErrorLabel.pack()
 
 
     def new_canvas_popular_window(self):
@@ -360,10 +376,13 @@ class mainWindow():
         stateText = self.stateMentPopularWindow.get()
 
         try:
-            data = topRestaurantsInState(stateText, int(numText))
+            data = topRestaurantsInState(stateText, numText)
             restaurantStarsPlot(data)
         except:
-            pass
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(500, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, for your input is wrong, we cannot plot now please try again.")
+            inputErrorLabel.pack()
 
 
     def plotBusinessReviwPopularWinow(self):
@@ -403,11 +422,31 @@ class mainWindow():
         numText = self.numMent.get()
 
         try:
-            showPriceRangeRestaurants = Label(self.expenseSearchWindow, text=restaurantInStateandPrice(stateText, int(priceRangeText), int(numText))[:7])
+            showPriceRangeRestaurants = Label(self.expenseSearchWindow, text=restaurantInStateandPrice(stateText, priceRangeText, numText))
             showPriceRangeRestaurants.place(relx=0.1, rely=0.79)
-        except InputError:
-            inputErrorLabel = Label(self.expenseSearchWindow, text="Sorry, your input state or price range or number of TOP is wrong.")
-            inputErrorLabel.place(relx=0.1, rely=0.74)
+        except num_topInputError:
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(500, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, your input NUMBER of top restaurants is wrong, please try again.")
+            inputErrorLabel.pack()
+        except stateInputError:
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(400, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, your input STATE is wrong, please try again.")
+            inputErrorLabel.pack()
+        except priceInputError:
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(400, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, your input PRICE RANGE is wrong, please try again.")
+            inputErrorLabel.pack()
+        except:
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(400, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, something else is wrong, please try again.")
+            inputErrorLabel.pack()
+
+
+
 
 
     def new_canvas_expense_window(self):
@@ -420,22 +459,36 @@ class mainWindow():
 
 
     def meanStarOfEachStateStarDistWindow(self):
+        '''
+        this function is to show the mean star of each state.
+        '''
         PlotStateMeanStar()
 
 
+    def showReviewCountsDistributton(self):
+        '''
+        this function is set up for the review counts distribution for the AZ state winodw.
+        '''
+        num = self.numberEntry.get()
+        try:
+            popRestaurantInState(num)
+        except:
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(400, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, your input number is wrong, please try again.")
+            inputErrorLabel.pack()
+
+
+
     def showCheckinDistributton(self):
+        '''
+        this function is set up for the checkindistribution button and it will show a graph for the distribution.
+        '''
         stateText = self.stateEntry.get()
         try:
             plot_checkin_distribution(merge_two_df(read_business_data(), read_checkin_data()), stateText)
         except:
-            errorlabel = Label(self.checkinTimeDistributionWindow, text="Sorry, there is something wrong with your input state, please try another state")
-            errorlabel.place(relx=0.1,rely=0.5)
-
-
-    def new_canvas_checkin_window(self):
-        '''
-        this function is set up for expense search window and its function is to clear the text in the window.
-        '''
-        w = Canvas(self.checkinTimeDistributionWindow, width=500, height=400)
-        w.pack()
-        w.place(relx=0.1, rely=0.49)
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(400, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, your input STATE is wrong, please try again.")
+            inputErrorLabel.pack()

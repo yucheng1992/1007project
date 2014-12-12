@@ -14,12 +14,10 @@ def main():
         # Input doesn't follow the instruction will raise exception.
 		
 		try:
-		
-			state = 'AZ'
-			num_top = int(raw_input('How many top popular restaurants in {} you want? \n'.format(state)))
+			num_top = int(raw_input('How many top popular restaurants in {} you want? \n'.format('AZ')))
 			
-			print 'This plots TOP {} popular restaurants in {}.'.format(num_top, state)
-			popRestaurantInState(state,num_top)
+			print 'This plots TOP {} popular restaurants in {}.'.format(num_top, 'AZ')
+			popRestaurantInState(num_top)
 			
 		except(InputError, ValueError):
 			print 'Invalid input, please follow the instruction. '

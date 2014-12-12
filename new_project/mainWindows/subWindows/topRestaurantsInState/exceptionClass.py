@@ -12,4 +12,4 @@ class num_topInputError(Exception):
     This exception will raise when user input for state does not follow the instruction.
     """
     
-	pass
+    pass

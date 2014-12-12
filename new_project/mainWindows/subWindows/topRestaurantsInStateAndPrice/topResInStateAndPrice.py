@@ -16,20 +16,26 @@ def restaurantInStateandPrice(state, price, num_top):
     state = state.upper()
     if state not in ['WI', 'AZ', 'NV', 'CA', 'ON', 'EDH', 'ELN', 'MLN', 'NY', 'KHL'] :
         raise stateInputError('Wrong state. ')
-		
-    if price not in [1,2,3,4]:
+
+    try:
+        pri = int(price)
+        if pri not in [1,2,3,4]:
+            raise priceInputError('Wrong price range. ')
+    except:
         raise priceInputError('Wrong price range. ')
-		
-    if not(num_top > 0):
+
+    try:
+        num = int(num_top)
+    except:
         raise num_topInputError('Wrong number of TOP. ')
 	
 	
-    select_restaurants = f[(f['state'] == state) & (f['attributes_Price Range'] <= price)]
+    select_restaurants = f[(f['state'] == state) & (f['attributes_Price Range'] <= pri)]
     sorted_restaurants = select_restaurants.sort(['stars','review_count','name'],ascending=False)
     sorted_restaurants['Price Range'] = sorted_restaurants['attributes_Price Range']
     sorted_restaurants.drop('attributes_Price Range', 1)
     sorted_restaurants.dropna()
-    return sorted_restaurants[:num_top][['name', 'city', 'attributes_Price Range', 'state', 'stars']]
+    return sorted_restaurants[:num if num < 7 else 6][['name', 'city', 'attributes_Price Range', 'state', 'stars']]
 
 
 def restaurantRegionPlot(restaurants):
