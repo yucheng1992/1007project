@@ -44,13 +44,13 @@ def restaurantStarsPlot(restaurants):
 
     fig = plt.figure()
 
-    ax1 = fig.add_subplot(1,2,1)
+    ax1 = fig.add_subplot(1, 2, 1)
     ax1.set_ylabel('stars')
-    topRestaurants['stars'].plot(kind = 'bar')
+    topRestaurants['stars'].plot(kind='bar')
 
     ax2 = fig.add_subplot(1,2,2)
     ax2.set_ylabel('review counts')
-    topRestaurants['review_count'].plot(kind = 'bar')
+    topRestaurants['review_count'].plot(kind='bar')
 
     plt.show()
 	
