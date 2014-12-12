@@ -23,24 +23,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mainWindow.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="mainWindow.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainWindows/mainWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9800">
-              <caret line="484" column="113" selection-start-line="484" selection-start-column="113" selection-end-line="484" selection-end-column="113" />
+            <state vertical-scroll-proportion="1.3977273" vertical-offset="5008" max-vertical-offset="9560">
+              <caret line="284" column="59" selection-start-line="284" selection-start-column="59" selection-end-line="284" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topResInState.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="topResInState.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1457195" vertical-offset="411" max-vertical-offset="1380">
-              <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="1380">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popRestaurantInState.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="1860">
+              <caret line="22" column="77" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="77" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,8 +114,8 @@
         <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInStateAndPrice/topResInStateAndPrice.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState_main.py" />
-        <option value="$PROJECT_DIR$/mainWindows/mainWindow.py" />
         <option value="$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState.py" />
+        <option value="$PROJECT_DIR$/mainWindows/mainWindow.py" />
       </list>
     </option>
   </component>
@@ -621,11 +631,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980111" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22036596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22036596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3322091" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3322091" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1016,14 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.36429873" vertical-offset="640" max-vertical-offset="1860">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/SearchRestaurantsByName/SearchByNameFuncs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
@@ -1048,21 +1050,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/mainWindow.py">
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9251" max-vertical-offset="9800">
-          <caret line="484" column="113" selection-start-line="484" selection-start-column="113" selection-end-line="484" selection-end-column="113" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="1380">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/popularRestaurantsInState/popRestaurantInState.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="1860">
+          <caret line="22" column="77" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainWindows/subWindows/topRestaurantsInState/topResInState.py">
+    <entry file="file://$PROJECT_DIR$/mainWindows/mainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1457195" vertical-offset="411" max-vertical-offset="1380">
-          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="1.3977273" vertical-offset="5008" max-vertical-offset="9560">
+          <caret line="284" column="59" selection-start-line="284" selection-start-column="59" selection-end-line="284" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>

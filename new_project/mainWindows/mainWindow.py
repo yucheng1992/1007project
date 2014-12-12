@@ -47,7 +47,7 @@ class mainWindow():
         self.checkinTimeDistributionButton = Button(text="Restaurants' Checkin Time Distribution", command=self.checkinTimeDistributionWindow)
         self.checkinTimeDistributionButton.place(relx=0.84, rely=0.66, anchor='center')
 
-        self.AZreviewCountsDistributionButton = Button(text="AZ popular restaurants' review", command=self.showAZReviewCountsDistributionWindow)
+        self.AZreviewCountsDistributionButton = Button(text="AZ's popular restaurants' review changes", command=self.showAZReviewCountsDistributionWindow)
         self.AZreviewCountsDistributionButton.place(relx=0.84, rely=0.33, anchor='center')
 
 
@@ -126,17 +126,12 @@ class mainWindow():
         # initialize the clear button
         clearButton = Button(self.popularRestaurantsWindow, text='Clear', command=self.new_canvas_popular_window)
         clearButton.pack()
-        clearButton.place(relx=0.55, rely=0.47)
+        clearButton.place(relx=0.33, rely=0.47)
 
         # initialize the plot star and review counts button.
         plotStarAndReviewButton = Button(self.popularRestaurantsWindow, text='Plot star and review counts', command=self.plotTopRestaurantsPopularWinow)
         plotStarAndReviewButton.pack()
-        plotStarAndReviewButton.place(relx=0.1, rely=0.52)
-
-        # initialize the plot the reviews counts a business get according to the time
-        plotReviewCountsTimeButton = Button(self.popularRestaurantsWindow, text="Plot a business's review counts", command=self.plotBusinessReviwPopularWinow)
-        plotReviewCountsTimeButton.pack()
-        plotReviewCountsTimeButton.place(relx=0.55, rely=0.52)
+        plotStarAndReviewButton.place(relx=0.55, rely=0.47)
 
 
     def expenseSearchWindow(self):
@@ -154,10 +149,10 @@ class mainWindow():
 
         # initialize some prompt labels
         promptLabelOne = Label(self.expenseSearchWindow, text="According to Yelp's definition, there are four categories in price ranges:")
-        promptLabelTwo = Label(self.expenseSearchWindow, text="$ -- corresponding to '1' in our data, price range: under 10;")
+        promptLabelTwo = Label(self.expenseSearchWindow, text="$ -- corresponding to '1' in our data, price range: under $10;")
         promptLabelThree = Label(self.expenseSearchWindow, text="$$ -- corresponding to '2' in our data, price range: $11-30;")
         promptLabelFour = Label(self.expenseSearchWindow, text="$$$ -- corresponding to '3' in our data, price range: $31-60;")
-        promptLabelFive = Label(self.expenseSearchWindow, text="$$$$ -- corresponding to '4' in our data, price range: Above 61$")
+        promptLabelFive = Label(self.expenseSearchWindow, text="$$$$ -- corresponding to '4' in our data, price range: Above $61")
         promptLabelOne.place(relx=0.1, rely=0.05)
         promptLabelTwo.place(relx=0.1, rely=0.1)
         promptLabelThree.place(relx=0.1, rely=0.15)
@@ -287,19 +282,27 @@ class mainWindow():
         '''
 
         self.reviewCountsWindow = Toplevel()
-        self.reviewCountsWindow.geometry('{}x{}'.format(600, 600))
+        self.reviewCountsWindow.geometry('{}x{}'.format(880, 600))
 
         self.numberEntry = StringVar()
 
-        promptLabel = Label(self.reviewCountsWindow, text="You can input the following numbers: 1, 2, 3, 4, 5")
+        promptLabelOne = Label(self.reviewCountsWindow, text="In this function, firstly, we select our all business in a given state.")
+        promptLabelTwo = Label(self.reviewCountsWindow, text="Because most review records in our dataset are in state AZ, we will only look into AZ this time.")
+        promptLabelThree = Label(self.reviewCountsWindow, text="Since there are too many restaurants to plot, we restrict the number of top popular restaurants to be smaller than a given threshold(say 5).")
+        promptLabelFour = Label(self.reviewCountsWindow, text="We want to show you how stars given by reviewers change over time.")
+        promptLabelFive = Label(self.reviewCountsWindow, text="You can input the following numbers: 1, 2, 3, 4, 5.")
         numbersEntry = Entry(self.reviewCountsWindow, textvariable=self.numberEntry)
-        promptLabel.place(relx=0.1, rely=0.25)
-        numbersEntry.place(relx=0.1, rely=0.3)
+        promptLabelOne.place(relx=0.05, rely=0.20)
+        promptLabelTwo.place(relx=0.05, rely=0.28)
+        promptLabelThree.place(relx=0.05, rely=0.36)
+        promptLabelFour.place(relx=0.05,rely=0.44)
+        promptLabelFive.place(relx=0.05, rely=0.52)
+        numbersEntry.place(relx=0.05, rely=0.6)
 
         # initialize the show review counts distribution distribution button
         showReviewCountsDistributionButton = Button(self.reviewCountsWindow, text='Show Review Counts Distribution', command=self.showReviewCountsDistributton)
         showReviewCountsDistributionButton.pack()
-        showReviewCountsDistributionButton.place(relx=0.1, rely=0.4)
+        showReviewCountsDistributionButton.place(relx=0.05, rely=0.68)
 
 
     def showRestaurantSearchButton(self):
@@ -317,8 +320,6 @@ class mainWindow():
             errorWindow.geometry('{}x{}'.format(500, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, find no Restaurant of this name, please try another name.")
             inputErrorLabel.pack()
-
-
 
 
     def plot3D(self):
@@ -385,18 +386,6 @@ class mainWindow():
             inputErrorLabel.pack()
 
 
-    def plotBusinessReviwPopularWinow(self):
-        '''
-        this function is set up for popular restaurants window and its function is to plot a business's review counts according to time changes.
-        '''
-        numText = self.numMentPopularWindow.get()
-        stateText = self.stateMentPopularWindow.get()
-
-        try:
-            popRestaurantInState(stateText, int(numText))
-        except:
-            pass
-
     def plotRestaurantRegionExpenseWindow(self):
         '''
         this function is set up for expense search window and its function is to plot a pie chart for the restaurants you search according to their regions
@@ -407,10 +396,13 @@ class mainWindow():
         numText = self.numMent.get()
 
         try:
-            data = restaurantInStateandPrice(stateText2, int(priceRangeText), int(numText))
+            data = restaurantInStateandPrice(stateText2, priceRangeText, numText)
             restaurantRegionPlot(data)
         except:
-            pass
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(500, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, your input is wrong, so we cannot plot, please try again.")
+            inputErrorLabel.pack()
 
 
     def showPriceRangeExpenseWindow(self):
@@ -446,9 +438,6 @@ class mainWindow():
             inputErrorLabel.pack()
 
 
-
-
-
     def new_canvas_expense_window(self):
         '''
         this function is set up for expense search window and its function is to clear the text in the window.
@@ -477,7 +466,6 @@ class mainWindow():
             errorWindow.geometry('{}x{}'.format(400, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, your input number is wrong, please try again.")
             inputErrorLabel.pack()
-
 
 
     def showCheckinDistributton(self):
