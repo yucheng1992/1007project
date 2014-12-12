@@ -332,8 +332,14 @@ class mainWindow():
         '''
 
         mtext = self.ment.get()
-        df = NameSearch(data, mtext)[:51]
-        plot3dDistribution(df)
+        try:
+            df = NameSearch(data, mtext)[:51]
+            plot3dDistribution(df)
+        except:
+            errorWindow = Toplevel()
+            errorWindow.geometry('{}x{}'.format(600, 30))
+            inputErrorLabel = Label(errorWindow, text="Sorry, find no Restaurant of this name so we cannot plot, please try another name.")
+            inputErrorLabel.pack()
 
 
     def new_canvas_search_window(self):

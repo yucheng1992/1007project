@@ -1,4 +1,4 @@
-# author: Wenjia Wu(ww933)
+# author: Wenjia Wu(ww933):90% and Yucheng Lu(yl2695):10%
 
 import pandas as pd
 from matplotlib import cm
