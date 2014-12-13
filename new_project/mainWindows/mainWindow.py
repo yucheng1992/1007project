@@ -550,7 +550,10 @@ class mainWindow():
         '''
 
         stateText = self.stateEntry.get()
+
         try:
+            # check if the state is valid in our dataset
+            checkin_state_check((stateText))
             plot_checkin_distribution(merge_two_df(read_business_data(), read_checkin_data()), stateText)
 
         # catch IO Exception
