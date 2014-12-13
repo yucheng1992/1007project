@@ -1,9 +1,17 @@
 # author: Wenying Liu(wl1207)
 
-class InputError(Exception):
+class stateInputError(Exception):
+
     """
-    This exception will raise when user input does not follow the instruction.
-    Either because the input value is out of value range or not contained in the records,
-    or it is in a wrong type.
+    This exception will raise when user input for state does not follow the instruction.
     """
+	
+    pass
+	
+class num_topInputError(Exception):
+
+    """
+    This exception will raise when user input for state does not follow the instruction.
+    """
+    
     pass

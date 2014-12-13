@@ -42,7 +42,11 @@ def popRestaurantInState(num_top):
     #Load yelp_training_set_business file.
     #Select only 'business_id','name','state' columns which are relevant to our analysis.
 
-    business = pd.read_csv('yelp_training_set_business.csv')
+    try:
+        business = pd.read_csv('yelp_training_set_business.csv')
+    except IOError:
+        print "Sorry, could not read file. Please check again."
+
     business = business[['business_id','name','state']]
 
     #Merge review dataset with business dataset.
