@@ -32,6 +32,8 @@ def restaurantInStateandPrice(state, price, num_top):
 
     try:
         num = int(num_top)
+        if num < 0:
+            raise num_topInputError('Wrong number of TOP. ')
     except:
         raise num_topInputError('Wrong number of TOP. ')
 	
