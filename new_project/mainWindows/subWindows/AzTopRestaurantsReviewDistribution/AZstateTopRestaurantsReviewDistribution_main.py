@@ -1,6 +1,6 @@
 # author: Wenying Liu(wl1207)
 
-from popRestaurantInState import popRestaurantInState
+from AZstateTopRestaurantsReviewDistribution import popRestaurantInState
 from exceptionClass import InputError
 import sys
 

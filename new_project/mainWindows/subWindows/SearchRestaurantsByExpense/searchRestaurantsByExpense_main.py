@@ -1,6 +1,6 @@
 # author: Wenying Liu(wl1207)
 
-from topResInStateAndPrice import restaurantInStateandPrice, restaurantRegionPlot
+from searchRestaurantsByExpense import restaurantInStateandPrice, restaurantRegionPlot
 from exceptionClass import stateInputError, priceInputError, num_topInputError
 import pandas as pd
 import sys

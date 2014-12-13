@@ -2,7 +2,7 @@
 import unittest
 from pandas import DataFrame, Series
 from exceptionClass import num_topInputError, stateInputError
-from topResInState import topRestaurantsInState
+from searchRestaurantsByPopularity import topRestaurantsInState
 
 
 class testtopRestaurantsInState(unittest.TestCase):

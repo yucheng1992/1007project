@@ -2,7 +2,7 @@
 import unittest
 from pandas import DataFrame, Index
 from exceptionClass import InputError
-from popRestaurantInState import popRestaurantInState
+from AZstateTopRestaurantsReviewDistribution import popRestaurantInState
 
 
 class testpopRestaurantInState(unittest.TestCase):
