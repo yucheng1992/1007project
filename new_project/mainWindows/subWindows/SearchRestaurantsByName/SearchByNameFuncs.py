@@ -51,6 +51,7 @@ def plot3dDistribution(df):
     ax.set_xlabel('latitude')
     ax.set_ylabel('longitude')
     ax.set_zlabel('stars')
+    ax.set_title("Restaurants' star distribution according to their location")
     plt.show()
 
 

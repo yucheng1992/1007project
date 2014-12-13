@@ -66,31 +66,31 @@ class mainWindow():
         self.ment = StringVar()
 
         # Initialize two labels to instruct the user to input.
-        promptLabelOne = Label(self.nameSearchWindow, text='Input the name of the restaurant you hope to find:', fg='black')
+        promptLabelOne = Label(self.nameSearchWindow, text='Input the name of the restaurant you hope to find:(For example: a)', fg='black')
         promptLabelTwo = Label(self.nameSearchWindow, text='If you want to search again, please press the clear button.')
 
         # Initialize the entry fot user inputs
         inputNameEntry = Entry(self.nameSearchWindow, textvariable=self.ment)
 
-        promptLabelOne.place(relx=0.23, rely=0.25)
-        promptLabelTwo.place(relx=0.23, rely=0.3)
+        promptLabelOne.place(relx=0.1, rely=0.25)
+        promptLabelTwo.place(relx=0.1, rely=0.3)
         inputNameEntry.pack()
-        inputNameEntry.place(relx=0.23, rely=0.35)
+        inputNameEntry.place(relx=0.1, rely=0.35)
 
         # initialize the 3D plot button
         plot3dButton = Button(self.nameSearchWindow, text='3D plot', command=self.plot3D)
         plot3dButton.pack()
-        plot3dButton.place(relx=0.8, rely=0.35)
+        plot3dButton.place(relx=0.7, rely=0.35)
 
         # initialize the search button
         searchButton = Button(self.nameSearchWindow, text='Search', command=self.showRestaurantSearchButton)
         searchButton.pack()
-        searchButton.place(relx=0.52, rely=0.35)
+        searchButton.place(relx=0.42, rely=0.35)
 
         # initialize the clear button
         clearButton = Button(self.nameSearchWindow, text='Clear', command=self.new_canvas_search_window)
         clearButton.pack()
-        clearButton.place(relx=0.66, rely=0.35)
+        clearButton.place(relx=0.56, rely=0.35)
 
 
     def popularRestaurantsWindow(self):
