@@ -232,27 +232,27 @@ class mainWindow():
         selectButtonLabel.place(relx=0.05, rely=0.35)
 
         # initialize every state's show button
-        buttonON = Button(self.stateStarDistributionWindow, text='ON state', command=lambda x='ON':PlotPieChartForOneState(x))
+        buttonON = Button(self.stateStarDistributionWindow, text='ON in Canada', command=lambda x='ON':PlotPieChartForOneState(x))
         buttonON.pack()
         buttonON.place(relx=0.2, rely=0.4)
 
-        buttonEDH = Button(self.stateStarDistributionWindow, text='EDH state', command=lambda x='EDH':PlotPieChartForOneState(x))
+        buttonEDH = Button(self.stateStarDistributionWindow, text='EDH in UK', command=lambda x='EDH':PlotPieChartForOneState(x))
         buttonEDH.pack()
         buttonEDH.place(relx=0.2, rely=0.52)
 
-        buttonMLN = Button(self.stateStarDistributionWindow, text='MLN state', command=lambda x='MLN':PlotPieChartForOneState(x))
+        buttonMLN = Button(self.stateStarDistributionWindow, text='MLN in UK', command=lambda x='MLN':PlotPieChartForOneState(x))
         buttonMLN.pack()
         buttonMLN.place(relx=0.55, rely=0.4)
 
-        buttonWI = Button(self.stateStarDistributionWindow, text='WI state', command=lambda x='WI':PlotPieChartForOneState(x))
+        buttonWI = Button(self.stateStarDistributionWindow, text='WI in US', command=lambda x='WI':PlotPieChartForOneState(x))
         buttonWI.pack()
         buttonWI.place(relx=0.2, rely=0.64)
 
-        buttonAZ = Button(self.stateStarDistributionWindow, text='AZ state', command=lambda x='AZ':PlotPieChartForOneState(x))
+        buttonAZ = Button(self.stateStarDistributionWindow, text='AZ in US', command=lambda x='AZ':PlotPieChartForOneState(x))
         buttonAZ.pack()
         buttonAZ.place(relx=0.55, rely=0.52)
 
-        buttonNV = Button(self.stateStarDistributionWindow, text='NV state', command=lambda x='NV':PlotPieChartForOneState(x))
+        buttonNV = Button(self.stateStarDistributionWindow, text='NV in US', command=lambda x='NV':PlotPieChartForOneState(x))
         buttonNV.pack()
         buttonNV.place(relx=0.55, rely=0.64)
 
