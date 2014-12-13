@@ -43,7 +43,7 @@ class mainWindow():
         self.popularRestaurantsButton = Button(text='Search Restaurants by Popularity', command=self.popularRestaurantsWindow)
         self.popularRestaurantsButton.place(relx=0.52, rely=0.33, anchor='center')
 
-        self.stateStarDistributionButton = Button(text="State's Restaurants' Stars Distribution", command=self.stateStarDistributionWindow)
+        self.stateStarDistributionButton = Button(text="Star Distribution for each state", command=self.stateStarDistributionWindow)
         self.stateStarDistributionButton.place(relx=0.52, rely=0.66, anchor='center')
 
         self.checkinTimeDistributionButton = Button(text="Restaurants' Checkin Time Distribution", command=self.checkinTimeDistributionWindow)
@@ -268,7 +268,7 @@ class mainWindow():
         self.stateEntry = StringVar()
 
         stateLabel = Label(self.checkinTimeDistributtonWindow, text="Please input the state whose overall restaurants' checkin numbers you want to see: ")
-        promptLabel = Label(self.checkinTimeDistributtonWindow, text="You can input the folling states: WI, AZ, ON, EDH, MLN, KHL, NV")
+        promptLabel = Label(self.checkinTimeDistributtonWindow, text="You can input the following states: WI, AZ, ON, EDH, MLN, KHL, NV")
         statesEntry = Entry(self.checkinTimeDistributtonWindow, textvariable=self.stateEntry)
         stateLabel.place(relx=0.1, rely=0.25)
         promptLabel.place(relx=0.1, rely=0.3)
