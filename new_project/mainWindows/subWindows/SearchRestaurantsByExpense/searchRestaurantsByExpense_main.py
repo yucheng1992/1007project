@@ -1,6 +1,6 @@
 # author: Wenying Liu(wl1207)
 
-from searchRestaurantsByExpense import restaurantInStateandPrice, restaurantRegionPlot
+from searchRestaurantsByExpense import searchRestaurantByExpenses, restaurantRegionPlot
 from exceptionClass import stateInputError, priceInputError, num_topInputError
 import pandas as pd
 import sys
@@ -25,7 +25,7 @@ def main():
 			num_top = int(raw_input('How many restaurants meeting the requirements do you want to see? \n'))
 
 			print "These are TOP 10 restaurants in {} with price below and containing {}. ".format(state, '$' * price)
-			restaurants = restaurantInStateandPrice(state, price, num_top)
+			restaurants = searchRestaurantByExpenses(state, price, num_top)
 			print restaurants.set_index('name')[['stars', 'attributes_Price Range', 'city']]
 
 			print "Show the regions where these top restaurants are in. "

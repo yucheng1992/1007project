@@ -1,6 +1,6 @@
 # author: Wenying Liu(wl1207)
 
-from AZstateTopRestaurantsReviewDistribution import popRestaurantInState
+from AZstateTopRestaurantsReviewDistribution import AZstateRestaurantReviewDistribution
 from exceptionClass import InputError
 import sys
 
@@ -19,7 +19,7 @@ def main():
 			num_top = int(raw_input('How many top popular restaurants in {} you want? \n'.format('AZ')))
 			
 			print 'This plots TOP {} popular restaurants in {}.'.format(num_top, 'AZ')
-			popRestaurantInState(num_top)
+			AZstateRestaurantReviewDistribution(num_top)
 			
 		except(InputError, ValueError):
 			print 'Invalid input, please follow the instruction. '

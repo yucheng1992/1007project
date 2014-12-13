@@ -8,7 +8,7 @@ from exceptionClass import InputError
 
 
 
-def popRestaurantInState(num_top):
+def AZstateRestaurantReviewDistribution(num_top):
     '''
 
     In this function, firstly, we select our all business in given state

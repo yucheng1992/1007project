@@ -1,6 +1,6 @@
 # author: Wenying Liu(wl1207)
 
-from searchRestaurantsByPopularity import topRestaurantsInState, restaurantStarsPlot, restaurantsMoreInformation
+from searchRestaurantsByPopularity import searchRestaurantByPopularity, restaurantStarsPlot, restaurantsMoreInformation
 from exceptionClass import stateInputError,num_topInputError
 import pandas as pd
 import sys
@@ -20,7 +20,7 @@ def main():
 			num_top = int(raw_input('How many TOP restaurants do you want to see? \n'))
 		
 			print "These are TOP 10 restaurants in {}. ".format(state)
-			restaurants = topRestaurantsInState(state, num_top)
+			restaurants = searchRestaurantByPopularity(state, num_top)
 			print restaurants['name']
 			
 			print "Show stars these restaurants have. "

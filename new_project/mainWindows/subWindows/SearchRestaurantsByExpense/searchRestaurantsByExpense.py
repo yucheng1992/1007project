@@ -11,7 +11,7 @@ except IOError:
 	print "Sorry, could not read file. Please check again."
 	
 
-def restaurantInStateandPrice(state, price, num_top):
+def searchRestaurantByExpenses(state, price, num_top):
     '''
     According to Yelp's definition, there are four categories in price ranges.
 	$ -- corresponding to '1' in our data, price range: under 10;

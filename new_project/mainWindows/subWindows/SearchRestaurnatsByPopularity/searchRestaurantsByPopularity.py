@@ -11,7 +11,7 @@ except(IOError):
 	print "Sorry, could not read file. Please check again."
 
 
-def topRestaurantsInState(state,num_top):
+def searchRestaurantByPopularity(state,num_top):
     '''
     This function will select out top restaurants in given state and given number.
     '''

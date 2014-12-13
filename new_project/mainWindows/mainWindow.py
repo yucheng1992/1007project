@@ -378,7 +378,7 @@ class mainWindow():
         stateText = self.stateMentPopularWindow.get()
 
         try:
-            restaurantLabel = Label(self.popularRestaurantsWindow, text=restaurantsMoreInformation(topRestaurantsInState(stateText, numText)))
+            restaurantLabel = Label(self.popularRestaurantsWindow, text=restaurantsMoreInformation(searchRestaurantByPopularity(stateText, numText)))
             restaurantLabel.place(relx=0.1, rely=0.62)
 
         # catch IO Exception
@@ -414,7 +414,7 @@ class mainWindow():
         stateText = self.stateMentPopularWindow.get()
 
         try:
-            data = topRestaurantsInState(stateText, numText)
+            data = searchRestaurantByPopularity(stateText, numText)
             restaurantStarsPlot(data)
 
         # catch IO Exception
@@ -441,7 +441,7 @@ class mainWindow():
         numText = self.numMent.get()
 
         try:
-            data = restaurantInStateandPrice(stateText2, priceRangeText, numText)
+            data = searchRestaurantByExpenses(stateText2, priceRangeText, numText)
             restaurantRegionPlot(data)
 
         # catch IO Exception
@@ -468,7 +468,7 @@ class mainWindow():
         numText = self.numMent.get()
 
         try:
-            showPriceRangeRestaurants = Label(self.expenseSearchWindow, text=restaurantInStateandPrice(stateText, priceRangeText, numText))
+            showPriceRangeRestaurants = Label(self.expenseSearchWindow, text=searchRestaurantByExpenses(stateText, priceRangeText, numText))
             showPriceRangeRestaurants.place(relx=0.1, rely=0.79)
 
         except num_topInputError:
@@ -528,7 +528,7 @@ class mainWindow():
 
         num = self.numberEntry.get()
         try:
-            popRestaurantInState(num)
+            AZstateRestaurantReviewDistribution(num)
 
         # catch IO Exception
         except IOError:
