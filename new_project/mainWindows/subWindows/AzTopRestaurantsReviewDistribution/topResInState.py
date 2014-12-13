@@ -5,7 +5,10 @@ import matplotlib.pyplot as plt
 from exceptionClass import stateInputError, num_topInputError
 
 
-f = pd.read_csv('yelp_restaurant_only_dataset.csv')
+try:
+	f = pd.read_csv('yelp_restaurant_only_dataset.csv')
+except(IOError):
+	print "Sorry, could not read file. Please check again."
 
 
 def topRestaurantsInState(state,num_top):

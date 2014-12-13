@@ -1,4 +1,4 @@
-# author: Wenjia Wu(ww933):65% and Yucheng Lu(yl2695):35%
+# author: Wenjia Wu(ww933):60% and Yucheng Lu(yl2695):40%
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11,8 +11,11 @@ def read_business_data():
     Read yelp_restaurant_only_dataset.csv into a DataFrame, and drop the columns except 'business_id', 'name', 'state'
     :return: a DataFrame with only three columns: 'business_id', 'name' and 'state',containing restaurants' information
     """
+    try:
+        business_data = pd.read_csv('yelp_restaurant_only_dataset.csv')
+    except IOError:
+        print 'Sorry, cannot read file, please check the file again.'
 
-    business_data = pd.read_csv('yelp_restaurant_only_dataset.csv')
     business_data = business_data[['business_id', 'name', 'state']]
 
     return business_data
@@ -23,8 +26,11 @@ def read_checkin_data():
     Read yelp_academic_dataset_checkin.csv into a DataFrame, fill the NaN values with 0, then drop the column 'type'
     :return: a cleaned DataFrame, containing check-in information
     """
+    try:
+        checkin_data = pd.read_csv('yelp_academic_dataset_checkin.csv')
+    except:
+        print 'Sorry, cannot read file, please check the file again.'
 
-    checkin_data = pd.read_csv('yelp_academic_dataset_checkin.csv')
     checkin_data = checkin_data.fillna(0)
     checkin_data = checkin_data.drop('type', 1)
 

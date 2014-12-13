@@ -30,7 +30,12 @@ def popRestaurantInState(num_top):
     #Load yelp_training_set_review dataset.
     #Transform the date columns into readable format.
     #Select only first four columns which are relevant to our analysis.
-    review = pd.read_csv('yelp_training_set_review.csv')
+    
+    try:
+        review = pd.read_csv('yelp_training_set_review.csv')
+    except IOError:
+        print "Sorry, could not read file. Please check again."
+		
     review['date'] = pd.to_datetime(review['date'])
     review = review.ix[:, :5]
 

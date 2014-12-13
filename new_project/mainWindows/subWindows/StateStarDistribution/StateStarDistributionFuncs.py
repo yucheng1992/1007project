@@ -7,8 +7,10 @@ import matplotlib.pyplot as plt
 
 from StateStarDistributionExceptions import *
 
-
-data = pd.read_csv('yelp_restaurant_only_dataset.csv')
+try:
+    data = pd.read_csv('yelp_restaurant_only_dataset.csv')
+except IOError:
+    print 'Sorry, cannot read file, please check the file again.'
 
 
 
