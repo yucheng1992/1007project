@@ -6,9 +6,9 @@ import numpy as np
 from subWindows.SearchRestaurantsByName.SearchByNameFuncs import *
 from subWindows.StateStarDistribution.StateStarDistributionFuncs import *
 import pandas as pd
-from subWindows.topRestaurantsInState.topResInState import *
-from subWindows.popularRestaurantsInState.popRestaurantInState import *
-from subWindows.topRestaurantsInStateAndPrice.topResInStateAndPrice import *
+from subWindows.AzTopRestaurantsReviewDistribution.topResInState import *
+from subWindows.popularRestaurantsInEachState.popRestaurantInState import *
+from subWindows.SearchRestaurantsByExpense.topResInStateAndPrice import *
 from subWindows.StateCheckinDistribution.CheckinDistributionFuncs import *
 
 
