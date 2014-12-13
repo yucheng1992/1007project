@@ -77,6 +77,7 @@ class mainWindow():
         inputNameEntry.pack()
         inputNameEntry.place(relx=0.23, rely=0.35)
 
+        # initialize the 3D plot button
         plot3dButton = Button(self.nameSearchWindow, text='3D plot', command=self.plot3D)
         plot3dButton.pack()
         plot3dButton.place(relx=0.8, rely=0.35)
@@ -319,6 +320,7 @@ class mainWindow():
             mylabel = Label(self.nameSearchWindow, text=GetUsefulInfo(NameSearch(data, mtext))[:16])
             mylabel.place(relx=0.2, rely=0.5)
 
+        # catch IO Exception
         except IOError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(450, 30))
@@ -341,11 +343,14 @@ class mainWindow():
         try:
             df = NameSearch(data, mtext)[:51]
             plot3dDistribution(df)
+
+        # catch IO Exception
         except IOError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(450, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, we cannot read the datafile, please check again.")
             inputErrorLabel.pack()
+
         except:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(600, 30))
@@ -375,11 +380,14 @@ class mainWindow():
         try:
             restaurantLabel = Label(self.popularRestaurantsWindow, text=restaurantsMoreInformation(topRestaurantsInState(stateText, numText)))
             restaurantLabel.place(relx=0.1, rely=0.62)
+
+        # catch IO Exception
         except IOError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(450, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, we cannot read the datafile, please check again.")
             inputErrorLabel.pack()
+
         except:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(350, 30))
@@ -409,6 +417,7 @@ class mainWindow():
             data = topRestaurantsInState(stateText, numText)
             restaurantStarsPlot(data)
 
+        # catch IO Exception
         except IOError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(450, 30))
@@ -435,6 +444,7 @@ class mainWindow():
             data = restaurantInStateandPrice(stateText2, priceRangeText, numText)
             restaurantRegionPlot(data)
 
+        # catch IO Exception
         except IOError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(450, 30))
@@ -460,26 +470,32 @@ class mainWindow():
         try:
             showPriceRangeRestaurants = Label(self.expenseSearchWindow, text=restaurantInStateandPrice(stateText, priceRangeText, numText))
             showPriceRangeRestaurants.place(relx=0.1, rely=0.79)
+
         except num_topInputError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(500, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, your input NUMBER of top restaurants is wrong, please try again.")
             inputErrorLabel.pack()
+
         except stateInputError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(400, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, your input STATE is wrong, please try again.")
             inputErrorLabel.pack()
+
         except priceInputError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(400, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, your input PRICE RANGE is wrong, please try again.")
             inputErrorLabel.pack()
+
+        # catch IO Exception
         except IOError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(450, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, we cannot read the datafile, please check again.")
             inputErrorLabel.pack()
+
         except:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(400, 30))
@@ -513,11 +529,14 @@ class mainWindow():
         num = self.numberEntry.get()
         try:
             popRestaurantInState(num)
+
+        # catch IO Exception
         except IOError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(450, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, we cannot read the datafile, please check again.")
             inputErrorLabel.pack()
+
         except:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(400, 30))
@@ -533,11 +552,14 @@ class mainWindow():
         stateText = self.stateEntry.get()
         try:
             plot_checkin_distribution(merge_two_df(read_business_data(), read_checkin_data()), stateText)
+
+        # catch IO Exception
         except IOError:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(450, 30))
             inputErrorLabel = Label(errorWindow, text="Sorry, we cannot read the datafile, please check again.")
             inputErrorLabel.pack()
+
         except:
             errorWindow = Toplevel()
             errorWindow.geometry('{}x{}'.format(400, 30))
