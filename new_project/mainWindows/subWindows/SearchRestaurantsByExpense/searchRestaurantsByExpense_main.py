@@ -26,7 +26,7 @@ def main():
 
 			print "These are TOP 10 restaurants in {} with price below and containing {}. ".format(state, '$' * price)
 			restaurants = searchRestaurantByExpenses(state, price, num_top)
-			print restaurants.set_index('name')[['stars', 'attributes_Price Range', 'city']]
+			print restaurants[['stars', 'Price Range', 'city']]
 
 			print "Show the regions where these top restaurants are in. "
 			restaurantRegionPlot(restaurants)

@@ -41,9 +41,10 @@ def searchRestaurantByExpenses(state, price, num_top):
     select_restaurants = f[(f['state'] == state) & (f['attributes_Price Range'] <= target_price)]
     sorted_restaurants = select_restaurants.sort(['stars','review_count','name'], ascending=False)
     sorted_restaurants['Price Range'] = sorted_restaurants['attributes_Price Range']
-    sorted_restaurants.drop('attributes_Price Range', 1)
+
     sorted_restaurants.dropna()
-    return sorted_restaurants[:num if num < 7 else 6][['name', 'city', 'attributes_Price Range', 'state', 'stars']]
+    sorted_restaurants = sorted_restaurants.set_index(['name'])
+    return sorted_restaurants[:num if num < 6 else 5][['city', 'Price Range', 'state', 'stars']]
 
 
 def restaurantRegionPlot(restaurants):
@@ -54,7 +55,7 @@ def restaurantRegionPlot(restaurants):
 
     plt.figure()
 
-    topRestaurants = restaurants.set_index('name')
-    plt.pie(topRestaurants['city'].value_counts(), labels=topRestaurants['city'].unique(), autopct='%.2f')
+
+    plt.pie(restaurants['city'].value_counts(), labels=restaurants['city'].unique(), autopct='%.2f')
     plt.title('The regions of the top restaurants')
     plt.show()
