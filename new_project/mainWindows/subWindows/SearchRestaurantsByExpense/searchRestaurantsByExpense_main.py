@@ -9,7 +9,7 @@ import sys
 def main():
     
 	'''
-    main function of topResInStateAndPrice.
+    main function of searchRestaurantByExpenses.
     '''
 
 	while True:

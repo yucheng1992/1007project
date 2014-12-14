@@ -48,7 +48,7 @@ def searchRestaurantByExpenses(state, price, num_top):
 
 def restaurantRegionPlot(restaurants):
     '''
-	The parameter 'restaurants' should be a DataFrame passed from above restaurantInStateandPrice function.
+	The parameter 'restaurants' should be a DataFrame passed from above searchRestaurantByExpenses function.
     And the function will return a pie graph showing the regions where these top restaurants are in.
 	'''
 
