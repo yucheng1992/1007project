@@ -378,7 +378,7 @@ class mainWindow():
         stateText = self.stateMentPopularWindow.get()
 
         try:
-            restaurantLabel = Label(self.popularRestaurantsWindow, text=restaurantsMoreInformation(searchRestaurantByPopularity(stateText, numText)))
+            restaurantLabel = Label(self.popularRestaurantsWindow, text=restaurantsMoreInformation(searchRestaurantByPopularity(stateText, numText))[:11])
             restaurantLabel.place(relx=0.1, rely=0.62)
 
         # catch IO Exception
