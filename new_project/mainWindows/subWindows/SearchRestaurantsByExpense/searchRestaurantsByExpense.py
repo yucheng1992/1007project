@@ -55,6 +55,6 @@ def restaurantRegionPlot(restaurants):
     plt.figure()
 
     topRestaurants = restaurants.set_index('name')
-    plt.pie(topRestaurants['city'].value_counts())
+    plt.pie(topRestaurants['city'].value_counts(), labels=topRestaurants['city'].unique(), autopct='%.2f')
     plt.title('The regions of the top restaurants')
     plt.show()
