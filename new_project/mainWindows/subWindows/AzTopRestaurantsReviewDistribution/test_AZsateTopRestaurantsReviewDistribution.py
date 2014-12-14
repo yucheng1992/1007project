@@ -2,12 +2,12 @@
 import unittest
 from pandas import DataFrame, Index
 from exceptionClass import InputError
-from AZstateTopRestaurantsReviewDistribution import popRestaurantInState
+from AZstateTopRestaurantsReviewDistribution import AZstateRestaurantReviewDistribution
 
 
-class testpopRestaurantInState(unittest.TestCase):
+class testAZstateRestaurantReviewDistribution(unittest.TestCase):
     '''
-    This is the test for the function popRestaurantInState.
+    This is the test for the function AZstateRestaurantReviewDistribution.
     '''
     def setUp(self):
         '''
@@ -16,11 +16,11 @@ class testpopRestaurantInState(unittest.TestCase):
         self.state = 'AZ'
         self.num_top = 10
 
-    def testpopRestaurantInState(self):
+    def testAZstateRestaurantReviewDistribution(self):
         '''
         Test the given function.
         '''
-        self.assertRaises(InputError, popRestaurantInState, self.num_top)
+        self.assertRaises(InputError, AZstateRestaurantReviewDistribution, self.num_top)
 
 
 if __name__ == '__main__':
