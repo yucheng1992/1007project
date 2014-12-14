@@ -414,8 +414,8 @@ class mainWindow():
         stateText = self.stateMentPopularWindow.get()
 
         try:
-            data = searchRestaurantByPopularity(stateText, numText)
-            restaurantStarsPlot(data)
+            popularData = searchRestaurantByPopularity(stateText, numText)
+            restaurantStarsPlot(popularData)
 
         # catch IO Exception
         except IOError:
@@ -441,8 +441,8 @@ class mainWindow():
         numText = self.numMent.get()
 
         try:
-            data = searchRestaurantByExpenses(stateText2, priceRangeText, numText)
-            restaurantRegionPlot(data)
+            expenseData = searchRestaurantByExpenses(stateText2, priceRangeText, numText)
+            restaurantRegionPlot(expenseData)
 
         # catch IO Exception
         except IOError:
